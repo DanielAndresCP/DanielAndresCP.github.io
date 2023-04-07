@@ -163,7 +163,7 @@
         let createOrFinishTimer = currentTimer.empty ? "create" : "finish"
         let workTimerActive = false
 
-        let timershistory = JSON.parse(window.localStorage.timershistory) || []
+        let timershistory = window.localStorage.timershistory === undefined ? [] : JSON.parse(window.localStorage.timershistory)
 
         function updateButtonsText() {
             if (createOrFinishTimer === "create") {
