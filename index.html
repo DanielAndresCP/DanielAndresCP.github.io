@@ -159,7 +159,7 @@
         let timerEndDateSettingElement = document.querySelector("#timerEndDate")
 
         var currentTimer = window.localStorage.currentTimer === undefined ? { empty: true } : JSON.parse(window.localStorage.currentTimer)
-        var settings = window.localStorage.settings === undefined ? { ogTimerColumn: false, showElapsedTime: false } : JSON.parse(window.localStorage.settings)
+        var settings = window.localStorage.settings === undefined ? { ogTimerColumn: false, showElapsedTime: false, timerEndDate: false} : JSON.parse(window.localStorage.settings)
         let createOrFinishTimer = currentTimer.empty ? "create" : "finish"
         let workTimerActive = false
 
